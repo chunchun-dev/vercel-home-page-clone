@@ -58,7 +58,8 @@ const NavbarDefaults = {
         },
         {
             text: 'Sign Up',
-            isButton: true
+            isButton: true,
+            primaryButton: true
         }
     ]
 }
