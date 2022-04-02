@@ -50,9 +50,11 @@ const NavbarDefaults = {
     navActions: [
         {
             text: 'Contact',
+            isButton: false
         },
         {
             text: 'Login',
+            isButton: false
         },
         {
             text: 'Sign Up',
