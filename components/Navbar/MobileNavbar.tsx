@@ -39,10 +39,10 @@ function MobileNavbar() {
       {navIsOpen && <> 
       <section id='nav-submenu' style={{ padding: '20px' }}>
         {NavbarDefaults.navActions.map((navAction, idx) => (
-          <Button w={'100%'} mb='1' type={navAction.primaryButton ? 'success' : 'default'}>{navAction.text}</Button>
+          <Button key={idx} w={'100%'} mb='1' type={navAction.primaryButton ? 'success' : 'default'}>{navAction.text}</Button>
         ))}
       </section>
-      <section style={{ padding: '15px' }}>
+      <section style={{ padding: '20px', marginTop: '-20px' }}>
         {NavbarDefaults.navItems.map((navItem, idx) => (
           <a style={{
             display: 'flex',
@@ -50,9 +50,10 @@ function MobileNavbar() {
             width: '100%',
             paddingTop: '15px',
             paddingBottom: '15px',
-            borderTop: '#ececec 1px solid'
+            borderBottom: '#ececec 1px solid'
           }}
-          href={navItem.link as string}>
+          href={navItem.link as string}
+          key={idx}>
             {navItem.text}
           </a>
         ))}
